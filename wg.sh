@@ -5,6 +5,7 @@ printf 'Package: *\nPin: release a=unstable\nPin-Priority: 90\n' > /etc/apt/pref
 apt update
 # 安全更新
 # env DEBIAN_FRONTEND=noninteractive apt upgrade -y -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold'
+apt upgrade -y
 #　安装wireguard
 apt install -y qrencode curl iptables wireguard
 # 开启BBR
