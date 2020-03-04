@@ -89,3 +89,5 @@ wg-quick up /etc/wireguard/wg0.conf
 systemctl enable wg-quick@wg0
 # 生成客户端二维码
 qrencode -t ansiutf8 < /etc/wireguard/client.conf
+# 查看客户端配置文件
+cat /etc/wireguard/client.conf
