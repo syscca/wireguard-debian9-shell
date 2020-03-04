@@ -1,14 +1,17 @@
 #!/bin/bash
-#添加wireguard源
-echo "deb http://deb.debian.org/debian/ unstable main" > /etc/apt/sources.list.d/unstable.list
-printf 'Package: *\nPin: release a=unstable\nPin-Priority: 90\n' > /etc/apt/preferences.d/limit-unstable
-apt update
+# 添加wireguard源
+# echo "deb http://deb.debian.org/debian/ unstable main" > /etc/apt/sources.list.d/unstable.list
+# printf 'Package: *\nPin: release a=unstable\nPin-Priority: 90\n' > /etc/apt/preferences.d/limit-unstable
+# apt update
+# 手动安全更新
 # apt upgrade -y
-# 安全更新
+# 非交互安全更新
 # env DEBIAN_FRONTEND=noninteractive apt upgrade -y -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold'
-#　安装wireguard
+# 安装wireguard
 apt install -y qrencode curl iptables wireguard
+# 卸载内核头
 # apt remove -y linux-headers-$(uname -r)
+# 安装内核头
 # apt install -y linux-headers-$(uname -r)
 # 开启BBR
 LSBBR=$(sysctl net.ipv4.tcp_congestion_control)
