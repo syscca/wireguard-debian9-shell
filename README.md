@@ -2,7 +2,7 @@
 
 首先安全更新系统
 
-apt update && env DEBIAN_FRONTEND=noninteractive apt upgrade -y -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold'
+apt update && env DEBIAN_FRONTEND=noninteractive apt upgrade -y -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold' && 
 
 全自动一键wireguard搭建脚本
 
