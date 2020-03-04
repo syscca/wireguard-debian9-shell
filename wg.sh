@@ -4,7 +4,7 @@ echo "deb http://deb.debian.org/debian/ unstable main" > /etc/apt/sources.list.d
 printf 'Package: *\nPin: release a=unstable\nPin-Priority: 90\n' > /etc/apt/preferences.d/limit-unstable
 apt update
 # 安全更新
-env DEBIAN_FRONTEND=noninteractive apt upgrade -y -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold'
+# env DEBIAN_FRONTEND=noninteractive apt upgrade -y -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold'
 #　安装wireguard
 apt install -y linux-headers-$(uname -r) qrencode curl iptables wireguard
 # 开启BBR
