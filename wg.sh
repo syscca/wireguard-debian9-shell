@@ -6,7 +6,7 @@ apt update
 # 安全更新
 # env DEBIAN_FRONTEND=noninteractive apt upgrade -y -o Dpkg::Options::='--force-confdef' -o Dpkg::Options::='--force-confold'
 #　安装wireguard
-apt install -y linux-headers-$(uname -r) qrencode curl iptables wireguard
+apt install -y qrencode curl iptables wireguard
 # 开启BBR
 LSBBR=$(sysctl net.ipv4.tcp_congestion_control)
 if [[ ${LSBBR} =~ "bbr" ]]; then
