@@ -84,6 +84,8 @@ PersistentKeepalive = 25
 EOF
 # 启动Wireguard
 wg-quick up /etc/wireguard/wg0.conf
+# 重新加载systemctl文件
+systemctl daemon-reload
 # 开机自启Wireguard
 systemctl enable wg-quick@wg0
 # 生成客户端二维码
